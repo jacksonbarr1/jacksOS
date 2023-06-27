@@ -1,0 +1,7 @@
+Create container: docker build buildenv -t jacksos-buildenv
+
+Spin up container: docker run --rm -it -v %cd%:/root/env jacksos-buildenv 
+
+Make (docker): make build-x86_64
+
+Qemu (cmd): qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso
